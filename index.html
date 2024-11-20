@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sestřel Zájmena</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            touch-action: none; /* Zabrání scrollování a zoomování */
+            user-select: none; /* Zabrání označování textu */
+        }
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+            background-color: white;
+            touch-action: none;
+        }
+        #controls {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .control-btn {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            font-size: 24px;
+            border: 2px solid black;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            cursor: pointer; /* Důležité pro myš */
+            touch-action: none;
+        }
+        .control-btn:active {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <!-- Ovládací tlačítka pro dotyková zařízení -->
+    <div id="controls">
+        <button id="leftBtn" class="control-btn">◀️</button>
+        <button id="shootBtn" class="control-btn">🔥</button>
+        <button id="rightBtn" class="control-btn">▶️</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
